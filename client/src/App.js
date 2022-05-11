@@ -1,5 +1,6 @@
-import './App.css';
+import './styles/App.css';
 import { Routes, Route } from "react-router-dom"
+import Nav from './components/Nav'
 import Landing from './pages/Landing'
 import Register from './pages/Register'
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="Nav">
-        
+        <Nav />
       </header>
       <div>
         <Routes>

@@ -80,7 +80,8 @@ return (
                     placeholder='Confirm your password'
                     value={formValues.confirmPassword} required />
                 </div>
-
+                <button disabled={!formValues.email ||(!formValues.password &&
+                formValues.confirmPassword === formValues.password)}>Register</button>
             </form>
         </div>
     </div>

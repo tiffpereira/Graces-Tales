@@ -1,0 +1,14 @@
+nav {
+    flex: 80%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    align-items: center;
+    background-color: rgb(170, 232, 170);
+    padding: 5px 20px;
+}
+
+nav .rightside {
+    justify-content: flex-end;    
+}
+

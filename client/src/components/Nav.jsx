@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom"
+import "../styles/Nav.css"
 // import { useState } from "react"
 
 const Nav = () => {
     // const [showLinks, setShowLinks] = useState(false)
 
     return (
-        <div>
+        <nav>
             <div>
             <Link to=""></Link>
-            <Link to="/Books">Books</Link>
+            <Link className="rightside"to="/Books">Books</Link>
             </div>
             <div>
-                <Link to="/cart">Cart</Link>
-                <Link to="/myaccount">My Account</Link>
+                <Link className="rightside" to="/cart">Cart</Link>
+                <Link className="rightside" to="/myaccount">My Account</Link>
             </div>
-        </div>
+        </nav>
     )
 
 }

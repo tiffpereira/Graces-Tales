@@ -16,11 +16,11 @@ const Nav = () => {
             </header>
             <div>
             <Link to=""></Link>
-            <Link className="rightside"to="/Books">Books</Link>
+            <Link className="nav-rightside"to="/Books">Books</Link>
             </div>
             <div>
-                <Link className="rightside" to="/cart">Cart</Link>
-                <Link className="rightside" to="/myaccount">My Account</Link>
+                <Link className="nav-rightside" to="/cart">Cart</Link>
+                <Link className="nav-rightside" to="/myaccount">My Account</Link>
             </div>
         </nav>
         </div>

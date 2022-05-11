@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom"
 import "../styles/Nav.css"
+import logo from '../assets/logo.png'
 // import { useState } from "react"
 
 const Nav = () => {
     // const [showLinks, setShowLinks] = useState(false)
 
     return (
+        <div>
         <nav>
+            <header>
+                <Link to='/'>
+                    <img src= {logo} alt="logo"/>
+                </Link>
+            </header>
             <div>
             <Link to=""></Link>
             <Link className="rightside"to="/Books">Books</Link>
@@ -16,6 +23,7 @@ const Nav = () => {
                 <Link className="rightside" to="/myaccount">My Account</Link>
             </div>
         </nav>
+        </div>
     )
 
 }

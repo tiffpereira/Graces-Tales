@@ -9,6 +9,19 @@ nav {
 }
 
 nav .rightside {
-    justify-content: flex-end;    
+    padding: 0px 30px;
+    color: white;
+    text-decoration: none;
+
 }
 
+img {
+    justify-content: right;
+    padding-right: 725px;
+    height: 50px;
+    float: left
+}
+
+Link {
+    text-decoration: none;
+}

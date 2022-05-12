@@ -24,8 +24,8 @@ const Books = () => {
                 {books.map((book) => (
                     <div className='individual-book' key={book.id}>
                         <div className='book'>
-                    <h3 className='book-title' onClick={() => navigate('/bookdetails')}>{book.title}</h3>
-                    <img className='book-image' src={book.photo_url} alt='book cover'/>
+                            <h3 className='book-title' onClick={() => navigate('/bookdetails')}>{book.title}</h3>
+                            <img className='book-image' src={book.photo_url} alt='book cover'/>
                         </div>
                     </div>
                 ))}

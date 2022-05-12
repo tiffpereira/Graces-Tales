@@ -17,3 +17,13 @@ export const GetBookDetails = async (id) => {
         throw error 
     }
 }
+
+// export const GetReviewDetails = async (id) => {
+//     try {
+//         const res = await Client.get(`/reviews/${id}`)
+//         return res.data
+//     } catch (error) {
+//         throw error 
+//     }
+// }
+

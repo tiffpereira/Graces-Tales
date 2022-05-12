@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { GetBookDetails } from '../services/UserServices'
 import { useNavigate, useParams } from 'react-router-dom'
 
-const BookDetails =  () => {
+const BookDetails =  (props) => {
     let navigate = useNavigate()
     const [bookDetails, setBookDetails] = useState([])
     const {id} = useParams()
@@ -10,7 +10,6 @@ const BookDetails =  () => {
     useEffect(() => {
         const handleBooks = async () => {
             const data = await GetBookDetails(id)
-            console.log(data)
             setBookDetails(data)
         }
         handleBooks()

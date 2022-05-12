@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { RegisterUser } from '../services/Auth'
 import '../styles/Register.css'
 
 const Register = () => {
@@ -10,7 +11,7 @@ const [formValues, setFormValues] = useState({
     name: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
 })
 
 const handleChange = (e) => {
@@ -19,16 +20,16 @@ const handleChange = (e) => {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-    // await RegisterUser({
-    //     name: formValues.name,
-    //     email: formValues.email,
-    //     password: formValues.password
-    // }) 
+    await RegisterUser({
+        name: formValues.name,
+        email: formValues.email,
+        password: formValues.password
+    }) 
     setFormValues({
-        name: "",
-        email: "",
-        password: "",
-        confirmPassword: ""
+        name: " ",
+        email: " ",
+        password: " ",
+        confirmPassword: " "
     })
     navigate('/signin')
 }
@@ -76,7 +77,7 @@ return (
                     <input
                     className='register-input'
                     onChange={handleChange}
-                    name='password'
+                    name='confirmPassword'
                     type='text'
                     placeholder='Confirm your password'
                     value={formValues.confirmPassword} required />

@@ -1,9 +1,16 @@
-.individual-book {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+.book-image {
+    height: 250px ;
+    padding: 0px 115px;
     align-items: center;
-    margin: auto;
 }
 
+.book-title {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+
+.individual-book {
+    display: inline-block;
+    width: 400px; 
+}

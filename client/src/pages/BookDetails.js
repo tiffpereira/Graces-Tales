@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { GetBookDetails } from '../services/UserServices'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
-const BookDetails = ( { id } ) => {
+const BookDetails =  () => {
     let navigate = useNavigate()
-    const [books, setBooks] = useState([])
+    const [bookDetails, setBookDetails] = useState([])
+    const {id} = useParams()
 
     useEffect(() => {
         const handleBooks = async () => {
             const data = await GetBookDetails(id)
-            setBooks(data)
+            console.log(data)
+            setBookDetails(data)
         }
         handleBooks()
     }, [id])
@@ -20,10 +22,10 @@ const BookDetails = ( { id } ) => {
                 <h1>BOOKS</h1>
             </div>
             <div>
-                {books.map((book) => (
-                    <div className='individual-book' key={book.id}>
+                {bookDetails.map((book) => (
+                    <div className='individual-book' key={bookDetails.id}>
                     <h3>{book.title}</h3>
-                    <img src={book.photo_url} alt='book cover' style={{height: 50, width: 50}}/>
+                    <img src={book.photo_url} alt='book cover' />
                     <h4>{book.author}</h4>
                     <h4>{book.genre}</h4>
                     <h4>{book.summary}</h4>

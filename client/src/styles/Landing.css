@@ -14,4 +14,23 @@
 
 .rightside {
     margin-left: 550px;
+    margin-top: 100px;
+}
+
+.landingpagebutton {
+    background-color: #f9bc60;
+    color: #001e1d;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.bothbuttons {
+    display: flex;
+    justify-content: center;
+}
+
+.registerbutton {
+    padding: 0px 25px;
 }

@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import SignIn from './pages/SignIn';
 import MyAccount from './pages/MyAccount';
 import Books from './pages/Books';
+import BookDetails from './pages/BookDetails';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/myaccount" element={<MyAccount />} />
           <Route path="/books" element={<Books />} />
+          <Route path="/bookDetails" element={<BookDetails />} />
         </Routes>
       </div>
     </div>

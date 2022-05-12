@@ -11,9 +11,9 @@ const Landing = () => {
             <div className='rightside'>
                 <div>
                     <h1>Grace's Tales</h1>
-                    <p> Join Grace's Tales today for the best book reviews!</p>
+                    <p> Join Grace's Tales today for the best book deals!</p>
                 </div>
-                <div>
+                <div className='bothbuttons'>
                     <div className='registerbutton'> 
                     <button className='landingpagebutton'onClick={() => navigate('/register')}>Join Now</button>
                     </div>

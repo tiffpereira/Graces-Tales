@@ -2,15 +2,18 @@ import React, { useState, useEffect } from 'react'
 import { GetBooks } from '../services/UserServices'
 import { useNavigate } from 'react-router-dom'
 import '../styles/Books.css'
+import { useParams } from 'react-router-dom'
 
 const Books = () => {
     let navigate = useNavigate()
     const [books, setBooks] = useState([])
-
+    let { id } = useParams()
+ 
     useEffect(() => {
         const handleBooks = async () => {
             const data = await GetBooks()
             setBooks(data)
+            console.log(data)
         }
         handleBooks()
     }, [])
@@ -24,7 +27,7 @@ const Books = () => {
                 {books.map((book) => (
                     <div className='individual-book' key={book.id}>
                         <div className='book'>
-                            <h3 className='book-title' onClick={() => navigate('/bookdetails')}>{book.title}</h3>
+                            <h3 className='book-title' onClick={() => navigate(`/books/${book.id}`)}>{book.title}</h3>
                             <img className='book-image' src={book.photo_url} alt='book cover'/>
                         </div>
                     </div>

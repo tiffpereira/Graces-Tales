@@ -1,39 +1,44 @@
 import React, { useState, useEffect } from 'react'
-import { GetBookDetails } from '../services/UserServices'
 import { useNavigate, useParams } from 'react-router-dom'
+import axios from 'axios'
+import '../styles/BookDetails.css'
 
-const BookDetails =  (props) => {
+const BookDetails =  () => {
     let navigate = useNavigate()
     const [bookDetails, setBookDetails] = useState([])
-    const {id} = useParams()
+    let { id } = useParams()
+    console.log(id)
+
+    const handleBookDetails = async () => {
+        const res = await axios.get(`http://localhost:8000/books/${id}`)
+        setBookDetails(res.data)
+        console.log(res.data)     
+    }
 
     useEffect(() => {
-        const handleBooks = async () => {
-            const data = await GetBookDetails(id)
-            setBookDetails(data)
-        }
-        handleBooks()
+        handleBookDetails()
     }, [id])
 
-    return (
-        <div>
+    console.log(bookDetails)
+
+        return (
             <div>
-                <h1>BOOKS</h1>
+                <div>
+                    <h1>BOOKS</h1>
+                </div>
+                <div>
+                        <div className='individual-book'>
+                        <h3>{bookDetails.title}</h3>
+                        <img className='bookDetails-image' src={bookDetails.photo_url} alt='book cover' />
+                        <h4>{bookDetails.author}</h4>
+                        <h4>{bookDetails.genre}</h4>
+                        <h4>{bookDetails.summary}</h4>
+                        <h4>{bookDetails.price}</h4>
+                        </div>
+                </div>
             </div>
-            <div>
-                {bookDetails.map((book) => (
-                    <div className='individual-book' key={bookDetails.id}>
-                    <h3>{book.title}</h3>
-                    <img src={book.photo_url} alt='book cover' />
-                    <h4>{book.author}</h4>
-                    <h4>{book.genre}</h4>
-                    <h4>{book.summary}</h4>
-                    <h4>{book.price}</h4>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
+        )
+    
 }
 
 export default BookDetails

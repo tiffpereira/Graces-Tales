@@ -18,12 +18,11 @@ export const GetBookDetails = async () => {
     }
 }
 
-// export const GetReviewDetails = async (id) => {
-//     try {
-//         const res = await Client.get(`/reviews/${id}`)
-//         return res.data
-//     } catch (error) {
-//         throw error 
-//     }
-// }
-
+export const DeleteReview = async (id) => {
+    try {
+        const res = await Client.delete(`/reviews/${id}`)
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}

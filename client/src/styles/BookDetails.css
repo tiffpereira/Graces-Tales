@@ -1,5 +1,26 @@
 .bookDetails-image {
-    height: 250px ;
+    height: 350px ;
     padding: 0px 115px;
     align-items: center;
+}
+
+.detail-btn {
+    background-color: #f9bc60;
+    color: #001e1d;
+    border-radius: 7px;
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    margin: 10px 10px 0px 5px;
+}
+
+.details-rightside {
+    text-align: center;
+    
+}
+
+.individual-book-details {
+    display: flex;
+    margin: 100px 50px 0px 0px ;
+    width: 1200px;
 }

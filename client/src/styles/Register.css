@@ -1,0 +1,27 @@
+.input-wrapper {
+}
+
+.name {
+
+}
+
+.register-input {
+    background-color: #004643;
+    color: #fffffe;
+    height: 30px;
+    width: 250px 
+}
+
+button {
+    background-color: #f9bc60;
+    color: #001e1d;
+    border-radius: 7px;
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    margin: 10px 10px 0px 5px;
+}
+
+label {
+    color: #004643
+}

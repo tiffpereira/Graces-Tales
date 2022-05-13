@@ -1,12 +1,11 @@
-import { useNavigate } from "react-router-dom";
-import { DeleteReview } from "../services/UserServices";
+import React from 'react'
+import axios from 'axios'
 
 const DeleteReviewBtn = ( { id } ) => {
-    let navigate = useNavigate()
-
+    console.log(id)
+    
     const handleDelete = async () => {
-        await DeleteReview(id)
-        navigate('/books/:id')
+        await axios.delete(`http://localhost:8000/reviews/${id}`)
     }
 
     return (

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import DeleteReviewBtn from '../components/DeleteReviewBtn'
-import Reviews from '../components/Reviews'
 import '../styles/BookDetails.css'
 
 const BookDetails =  () => {
@@ -22,7 +21,7 @@ const BookDetails =  () => {
 
     console.log(bookDetails)
 
-       if (bookDetails) {
+       if (bookDetails.reviews) {
         return (
             <div>
                 <div>
@@ -39,32 +38,16 @@ const BookDetails =  () => {
                                 <button className='detail-btn' onClick={() => navigate('/books')}>Back</button>
                             </div>
                         </div>
-                        <div> 
-                            
-                            {/* {bookDetails.reviews.map((review, index) => ( 
+                        <div className='reviews-bottom'>
+                            <h3>Reviews:</h3> 
+                            {bookDetails.reviews.map((review, index) => ( 
                                 <div className='individual-review' key={index}>
                                     <h3>{review.name}</h3>
                                     <h4>{review.title}</h4>
                                     <h4>{review.body}</h4>
+                                    <DeleteReviewBtn />
                                 </div> 
-                                ))}    */}
-
-                            {/* {bookDetails.reviews.map((review, index) => {
-                                return (
-                                    <div>
-                                        <div className='individual-review' key={index}>
-                                            <h3>{review.name}</h3>
-                                            <h4>{review.title}</h4>
-                                            <h4>{review.rating}</h4>
-                                            <h4>{review.body}</h4>
-                                        </div>
-                                        <div className='Review-Delete-Btn'>
-                                        <DeleteReviewBtn id={id}/> 
-                                        </div>
-                                    </div>
-                             )})} */}
-                           
-                           
+                                ))}                             
                         </div>
                 </div>
             </div>

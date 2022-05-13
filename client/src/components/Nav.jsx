@@ -20,7 +20,6 @@ const Nav = () => {
             </div>
             <div>
                 <Link className="nav-rightside" to="/myaccount">My Account</Link>
-                <Link className="nav-rightside" to="/cart">Cart</Link>
             </div>
         </nav>
         </div>

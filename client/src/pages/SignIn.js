@@ -12,7 +12,7 @@ const SignIn = () => {
   }
     const handleSubmit = async (e) => {
     e.preventDefault()
-    navigate("/myaccount")
+    navigate("/books")
   }
   
   return (

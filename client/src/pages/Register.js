@@ -31,7 +31,6 @@ const handleSubmit = async (e) => {
         password: " ",
         confirmPassword: " "
     })
-    navigate('/signin')
 }
 
 return (
@@ -84,7 +83,7 @@ return (
                 </div>
                 <button disabled={!formValues.email ||(!formValues.password &&
                 formValues.confirmPassword === formValues.password)} >Register</button>
-            </form>
+            </form> 
         </div>
     </div>
 )

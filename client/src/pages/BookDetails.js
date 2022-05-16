@@ -48,7 +48,6 @@ const BookDetails =  () => {
                                     <h4>{review.title}</h4>
                                     <h4>{review.body}</h4>
                                     <DeleteReviewBtn />
-                                    <UpdateReview />
                                 </div> 
                                 ))}                             
                         </div>

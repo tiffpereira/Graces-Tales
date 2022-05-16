@@ -26,3 +26,12 @@ export const GetBookDetails = async () => {
 //         throw error
 //     }
 // }
+
+export const CreateReview = async () => {
+    try {
+        const res = await Client.put(`/reviews/`)
+        return res.data
+    } catch (error) {
+        throw error 
+    }
+}

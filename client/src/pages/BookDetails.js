@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import DeleteReviewBtn from '../components/DeleteReviewBtn'
 import '../styles/BookDetails.css'
+import CreateReview from '../components/CreateReview'
+import UpdateReview from '../components/UpdateReview'
 
 const BookDetails =  () => {
     let navigate = useNavigate()
@@ -46,8 +48,12 @@ const BookDetails =  () => {
                                     <h4>{review.title}</h4>
                                     <h4>{review.body}</h4>
                                     <DeleteReviewBtn />
+                                    <UpdateReview />
                                 </div> 
                                 ))}                             
+                        </div>
+                        <div>
+                            <CreateReview /> 
                         </div>
                 </div>
             </div>
